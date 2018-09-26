@@ -12,10 +12,21 @@ defmodule ReproductionSpec do
     end
   end
 
+  # Not fine here!
   describe "problematic shared spec invocation" do
     let(let_value: :rand.uniform())
     let(other_value: let_value())
 
     include_examples(TheSharedSpec)
+  end
+
+  # Fine here!
+  describe "works okay without shared specs" do
+    let(let_value: :rand.uniform())
+    let(other_value: let_value())
+
+    it "works here" do
+      expect(let_value() |> to(eq(other_value())))
+    end
   end
 end

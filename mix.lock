@@ -1,0 +1,4 @@
+%{
+  "espec": {:git, "https://github.com/antonmi/espec.git", "a944437df0fbef45b95596f67013a75f4eb48013", []},
+  "meck": {:hex, :meck, "0.8.12", "1f7b1a9f5d12c511848fec26bbefd09a21e1432eadb8982d9a8aceb9891a3cf2", [:rebar3], [], "hexpm"},
+}
